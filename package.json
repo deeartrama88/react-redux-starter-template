@@ -49,8 +49,8 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "pretty-quick --staged",
-      "test",
       "git add"
-    ]
+    ],
+    "*.test.js": "test"
   }
 }
