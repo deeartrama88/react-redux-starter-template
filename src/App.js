@@ -1,33 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './components/header';
+import Footer from './components/footer';
+import './assets/scss/app.scss';
+import './assets/fontAwesomeConnection';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          hello, Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React 3
-        </a>
-        <div>
-          test prettify{' '}
-          <div>
-            {' '}
-            nest <span>hello</span>
-          </div>
-        </div>
-      </header>
-    </div>
-  );
-}
+const MainPage = lazy(() => import('./layouts/MainPage'));
+const CooksPage = lazy(() => import('./layouts/Cooks'));
+
+const App = () => {
+   return (
+      <BrowserRouter>
+         <div className="app">
+            <Header />
+            <div className="main-content">
+               <Suspense fallback={<div>loading...</div>}>
+                  <Route exact path="/" component={MainPage} />
+                  <Route exact path="/contacts" component={CooksPage} />
+               </Suspense>
+            </div>
+            <Footer />
+         </div>
+      </BrowserRouter>
+   );
+};
 
 export default App;

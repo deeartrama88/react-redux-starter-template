@@ -1,0 +1,29 @@
+@import "../../assets/scss/mixins";
+
+header {
+  border-bottom: 3px solid #333946;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.nav {
+  &-text {
+    margin: 0 10px;
+  }
+  &-link {
+    color: inherit;
+    padding: 10px 20px;
+    text-decoration: none;
+    &:hover {
+      color: yellowgreen;
+    }
+    &.active {
+      border-bottom: 3px solid blanchedalmond;
+      background: rgba(255, 255, 255, .05);
+    }
+  }
+}
+
+.log-in {
+  @include flex(space-between, row wrap);
+}

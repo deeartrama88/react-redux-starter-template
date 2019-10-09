@@ -24,6 +24,8 @@
       "absolute-first"
     ],
     "no-unused-vars": "error",
+    "no-shadow": "off",
+    "react/button-has-type": "off",
     "import/newline-after-import": "error"
   },
   "globals": {
