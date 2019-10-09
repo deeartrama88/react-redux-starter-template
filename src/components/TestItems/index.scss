@@ -1,19 +1,19 @@
 @import '../../assets/scss/mixins';
 
 .test-item {
-  width: 250px;
-  padding: 10px;
-  background: rgba(0, 0, 0, .1);
-  border-radius: 5px;
-  margin-bottom: 10px;
-  @include flex(space-between, column wrap);
-  &-actions {
-    margin-top: 10px;
-  }
-  &.selected {
-    background: rgba(255, 255, 255, .1);
-  }
+   width: 250px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   margin-bottom: 10px;
+   @include flex(space-between, column wrap);
+   &-actions {
+      margin-top: 10px;
+   }
+   &.selected {
+      background: rgba(255, 255, 255, 0.1);
+   }
 }
 .test-list {
-  @include flex(space-between, row wrap);
+   @include flex(space-between, row wrap);
 }
