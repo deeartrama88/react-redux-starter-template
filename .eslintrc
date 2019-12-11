@@ -23,10 +23,14 @@
       "error",
       "absolute-first"
     ],
-    "no-unused-vars": "error",
+    "no-unused-vars": "warn",
     "no-shadow": "off",
     "react/button-has-type": "off",
-    "import/newline-after-import": "error"
+    "import/newline-after-import": "warn",
+    "no-console": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-unneeded-ternary": "off"
   },
   "globals": {
     "window": true,
