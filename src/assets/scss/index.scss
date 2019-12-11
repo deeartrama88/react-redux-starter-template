@@ -19,6 +19,9 @@ body {
    display: flex;
    justify-content: center;
 }
+.ReactModal__Body--open {
+   overflow-y: hidden;
+}
 code {
    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;

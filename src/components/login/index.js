@@ -15,6 +15,7 @@ const LoginMenu = () => {
          margin: 'auto'
       }
    };
+   const closeModal = () => toggleModal(false);
    return (
       <div className="login">
          <FontAwesomeIcon icon="user" />
@@ -25,7 +26,13 @@ const LoginMenu = () => {
             overlayClassName="modalDefaultOverlay"
             style={customStyles}
             isOpen={isOpen}
+            shouldCloseOnOverlayClick={true}
+            onRequestClose={closeModal}
+            ariaHideApp={false}
          >
+            <div className="close" onClick={closeModal}>
+               close
+            </div>
             <BasicForm />
          </Modal>
       </div>
