@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Header from './components/header';
+import Header from './components/header/Header';
 import Footer from './components/footer';
 import './assets/scss/app.scss';
 import './assets/fontAwesomeConnection';
