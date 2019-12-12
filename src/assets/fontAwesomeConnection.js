@@ -13,7 +13,8 @@ import {
    faUtensils,
    faTrashAlt,
    faCartPlus,
-   faUser
+   faUser,
+   faTimes
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -23,5 +24,6 @@ library.add(
    faTrashAlt,
    faCartPlus,
    faSeedling,
-   faUser
+   faUser,
+   faTimes
 );

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
 import LoginMenu from '../login';
-import Cart from '../cart';
 
 const Header = () => {
    return (
@@ -31,7 +30,6 @@ const Header = () => {
                </NavLink>
             </div>
             <div className="log-in">
-               <Cart />
                <LoginMenu />
             </div>
          </div>
