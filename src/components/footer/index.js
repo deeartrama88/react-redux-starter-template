@@ -9,18 +9,33 @@ import '../../assets/scss/footer.scss';
 
 const Footer = () => {
    return (
-      <footer className='footer'>
+      <footer className="footer">
          <div className="container">
-            <span className='footer-title'>CONTACTS</span>
-            <span className='footer-desc'>Feel free to contact, join us in social media and help us to create better shop!</span>
+            <span className="footer-title">CONTACTS</span>
+            <span className="footer-desc">
+               Feel free to contact, join us in social media and help us to
+               create better shop!
+            </span>
          </div>
-         <div className='footer-social'>
-            <a href="/"><img src={GoogleMail} alt="icon"/></a>
-            <a href="/"><img src={ArtIcon} alt="icon"/></a>
-            <a href="/"><img src={FacebookIcon} alt="icon"/></a>
-            <a href="/"><img src={InstaIcon} alt="icon"/></a>
-            <a href="/"><img src={LinkedinIcon} alt="icon"/></a>
-            <a href="/"><img src={YoutubeIcon} alt="icon"/></a>
+         <div className="footer-social">
+            <a href="/">
+               <img src={GoogleMail} alt="icon" />
+            </a>
+            <a href="/">
+               <img src={ArtIcon} alt="icon" />
+            </a>
+            <a href="/">
+               <img src={FacebookIcon} alt="icon" />
+            </a>
+            <a href="/">
+               <img src={InstaIcon} alt="icon" />
+            </a>
+            <a href="/">
+               <img src={LinkedinIcon} alt="icon" />
+            </a>
+            <a href="/">
+               <img src={YoutubeIcon} alt="icon" />
+            </a>
          </div>
       </footer>
    );
