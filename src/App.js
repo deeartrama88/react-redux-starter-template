@@ -7,6 +7,7 @@ import './assets/fontAwesomeConnection';
 
 const MainPage = lazy(() => import('./layouts/MainPage'));
 const CooksPage = lazy(() => import('./layouts/Cooks'));
+const ProductPage = lazy(() => import('./layouts/ProductPage'));
 
 const App = () => {
    return (
@@ -16,7 +17,8 @@ const App = () => {
             <div className="main-content">
                <Suspense fallback={<div>loading...</div>}>
                   <Route exact path="/" component={MainPage} />
-                  <Route exact path="/contacts" component={CooksPage} />
+                  <Route path="/contacts" component={CooksPage} />
+                  <Route path="/product/:id" component={ProductPage} />
                </Suspense>
             </div>
             <Footer />
