@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+   img {
+    height: 62px;
+  }
+  &-input input {
+    width: 250px;
+    font-size: 20px;
+    cursor: pointer;
+
+    padding: 5px 5px 5px 40px;
+    height: 20px;
+    background: url('../../assets/images/header/footer-search-icon.png') no-repeat 7px 1px;
+    background-size: auto 90%;
+  }
+  &-assets img {
+    height: 32px;
+    cursor: pointer;
+  }
+  &-box img {
+    height: 32px;
+    padding: 0 15px;
+    cursor: pointer;
+
+  }
+  &-user img {
+    cursor: pointer;
+  }
+  &-menu img {
+    height: 32px;
+    cursor: pointer;
+  }
+}

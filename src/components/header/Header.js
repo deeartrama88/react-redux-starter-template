@@ -10,25 +10,25 @@ import UserIcon from '../../assets/images/header/header-user-icon.png';
 
 const Header = () => {
    return (
-      <header>
-         <div>
+      <header className='header'>
+         <div className='logo'>
             <img src={LogoIcon} alt="" />
          </div>
-         <div>
-            <input type="text" />
+         <div className='header-input'>
+            <input className='search' type="text" />
          </div>
-         <div>
+         <div className='header-assets'>
             <img src={AssetsIcon} alt="" />
          </div>
-         <div>
+         <div className='header-box'>
             <img src={MassageIcon} alt="" />
             <img src={FavriteIcon} alt="" />
             <img src={BasketIcon} alt="" />
          </div>
-         <div>
+         <div className='header-user'>
             <img src={UserIcon} alt="" />
          </div>
-         <div>
+         <div className='header-menu'>
             <img src={BurgerIcon} alt="" />
          </div>
       </header>
