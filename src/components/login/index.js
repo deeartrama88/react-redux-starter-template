@@ -1,40 +1,25 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Modal from 'react-modal';
+import BasicModal from '../modal/BasicModal';
 import BasicForm from '../forms/basic';
 import './index.scss';
 
 const LoginMenu = () => {
    const [isOpen, setIsOpen] = React.useState(false);
-   const toggleModal = val => setIsOpen(val ? val : !isOpen);
-   const customStyles = {
-      content: {
-         width: '50%',
-         height: '50%',
-         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-         margin: 'auto'
-      }
+   const toggleModal = () => setIsOpen(!isOpen);
+   const handleClose = () => {
+      // custom close modal action here
+      setIsOpen(false);
    };
-   const closeModal = () => toggleModal(false);
    return (
       <div className="login">
          <FontAwesomeIcon icon="user" />
          <span className="text" onClick={toggleModal}>
-            Login
+            Login 2
          </span>
-         <Modal
-            overlayClassName="modalDefaultOverlay"
-            style={customStyles}
-            isOpen={isOpen}
-            shouldCloseOnOverlayClick={true}
-            onRequestClose={closeModal}
-            ariaHideApp={false}
-         >
-            <div className="close" onClick={closeModal}>
-               close
-            </div>
+         <BasicModal isOpen={isOpen} closeModal={handleClose}>
             <BasicForm />
-         </Modal>
+         </BasicModal>
       </div>
    );
 };

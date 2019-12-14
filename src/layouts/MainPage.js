@@ -1,9 +1,11 @@
 import React from 'react';
+import ProductList from '../components/products/productList/ProductsList';
 
 const MainPage = () => {
    return (
       <div className="container">
-         <h1>Choose your meal for today:)</h1>
+         <h1>Products list</h1>
+         <ProductList />
       </div>
    );
 };
