@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const TestItem = ({ title, id, selected, setSelected, deleteItem }) => {
    const selectedClass = selected ? 'selected' : '';
+   console.log('render test item');
    return (
       <div className={`test-item ${selectedClass}`}>
          <span className="test-item-title">

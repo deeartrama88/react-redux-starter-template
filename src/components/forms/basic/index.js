@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-const Basic = () => (
+const Basic = ({ submitHandler }) => (
    <div>
       <h1>Anywhere in your app!</h1>
       <Formik
@@ -17,11 +17,8 @@ const Basic = () => (
             }
             return errors;
          }}
-         onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-               console.log(JSON.stringify(values, null, 2));
-               setSubmitting(false);
-            }, 400);
+         onSubmit={values => {
+            if (submitHandler) submitHandler(values);
          }}
       >
          {({
@@ -30,8 +27,7 @@ const Basic = () => (
             touched,
             handleChange,
             handleBlur,
-            handleSubmit,
-            isSubmitting
+            handleSubmit
             /* and other goodies */
          }) => (
             <form onSubmit={handleSubmit}>
@@ -51,9 +47,7 @@ const Basic = () => (
                   value={values.password}
                />
                {errors.password && touched.password && errors.password}
-               <button type="submit" disabled={isSubmitting}>
-                  Submit
-               </button>
+               <button type="submit">Submit</button>
             </form>
          )}
       </Formik>

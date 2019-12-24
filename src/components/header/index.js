@@ -1,40 +1,40 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
 import LoginMenu from '../login';
+import LogoIcon from '../../assets/images/header/header-logo-icon.png';
+import AssetsIcon from '../../assets/images/header/header-assets-icon.png';
+import BasketIcon from '../../assets/images/header/header-basket-icon.png';
+import BurgerIcon from '../../assets/images/header/header-burger-icon.png';
+import FavriteIcon from '../../assets/images/header/header-favrite-icon.png';
+import MassageIcon from '../../assets/images/header/header-message-icon.png';
+import UserIcon from '../../assets/images/header/header-user-icon.png';
 
-const Header = () => {
+const Index = () => {
    return (
-      <header>
-         <div className="container flex">
-            <div className="logo">Logo</div>
-            <div className="nav">
-               <NavLink
-                  exact
-                  activeClassName="active"
-                  className="nav-link"
-                  to="/"
-               >
-                  <FontAwesomeIcon icon="utensils" />
-                  <span className="nav-text">Dishes</span>
-               </NavLink>
-               <NavLink
-                  exact
-                  activeClassName="active"
-                  className="nav-link"
-                  to="/contacts"
-               >
-                  <FontAwesomeIcon icon="user-friends" />
-                  <span className="nav-text">Cooks</span>
-               </NavLink>
-            </div>
-            <div className="log-in">
-               <LoginMenu />
-            </div>
+      <header className="header">
+         <div className="logo">
+            <img src={LogoIcon} alt="" />
+         </div>
+         <div className="header-input">
+            <input className="search" type="text" />
+         </div>
+         <div className="header-assets">
+            <img src={AssetsIcon} alt="" />
+         </div>
+         <div className="header-box">
+            <img src={MassageIcon} alt="" />
+            <img src={FavriteIcon} alt="" />
+            <img src={BasketIcon} alt="" />
+         </div>
+         <div className="header-user">
+            <img src={UserIcon} alt="" />
+            <LoginMenu />
+         </div>
+         <div className="header-menu">
+            <img src={BurgerIcon} alt="" />
          </div>
       </header>
    );
 };
 
-export default Header;
+export default Index;

@@ -1,29 +1,37 @@
-@import '../../assets/scss/mixins';
-
-header {
-   border-bottom: 3px solid #333946;
-   width: 100%;
-   padding: 10px 0;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.nav {
-   &-text {
-      margin: 0 10px;
+.header {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 25px;
+   img {
+      height: 62px;
    }
-   &-link {
-      color: inherit;
-      padding: 10px 20px;
-      text-decoration: none;
-      &:hover {
-         color: yellowgreen;
-      }
-      &.active {
-         border-bottom: 3px solid blanchedalmond;
-         background: rgba(255, 255, 255, 0.05);
-      }
-   }
-}
+   &-input input {
+      width: 250px;
+      font-size: 20px;
+      cursor: pointer;
 
-.log-in {
-   @include flex(space-between, row wrap);
+      padding: 5px 5px 5px 40px;
+      height: 20px;
+      background: url('../../assets/images/header/footer-search-icon.png')
+         no-repeat 7px 1px;
+      background-size: auto 90%;
+   }
+   &-assets img {
+      height: 32px;
+      cursor: pointer;
+   }
+   &-box img {
+      height: 32px;
+      padding: 0 15px;
+      cursor: pointer;
+   }
+   &-user img {
+      cursor: pointer;
+      height: 42px;
+   }
+   &-menu img {
+      height: 26px;
+      cursor: pointer;
+   }
 }

@@ -1,5 +1,5 @@
 {
-   "name": "local-food",
+   "name": "dimon-shop",
    "version": "0.1.0",
    "private": true,
    "dependencies": {
@@ -56,7 +56,6 @@
    },
    "husky": {
       "hooks": {
-         "pre-commit": "pretty-quick && npm run lint && npm run test:nowatch"
       }
    },
    "lint-staged": "npm run test"
