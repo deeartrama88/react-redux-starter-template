@@ -7,7 +7,7 @@ const ProductPreview = ({ product }) => {
 
          {/* верстка продукта здесь */}
          <div className="product-preview-image">
-            <img src={product.imgSrc} alt="preview image" />
+            <img src={product.imgSrc} alt="preview" />
          </div>
          <div className="product-preview-title">{product.title}
             <div className='product-preview-price'>{product.price}$</div>
@@ -15,12 +15,8 @@ const ProductPreview = ({ product }) => {
          <div className='product-preview-desc'>{product.desc}</div>
          <hr className='product-preview-line'/>
          <div className='product-preview-category'>
-            {product.category.map(value => {
-               return  <div>{value}</div>
-            })}
+            {product.category.map(value => <div key={value}>{value}</div>)}
          </div>
-
-
       </div>
    );
 };
