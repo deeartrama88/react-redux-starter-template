@@ -38,7 +38,7 @@ const FormikLoginForm = withFormik({
     mapPropsToValues: () => ({ username: '', password: '' }),
     validationSchema,
     handleSubmit: (values, { setSubmitting, props }) => {
-        props.login(values, setSubmitting)
+        props.login(values, setSubmitting, props);
     }
 })(LoginForm);
 

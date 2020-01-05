@@ -4,13 +4,12 @@ export const test = val => {
    console.log('test', val);
 };
 
-export const login = (creds, setSubmitting) => dispatch => {
+export const login = (creds, setSubmitting, props) => dispatch => {
    dispatch({ type: LOGIN_LOADING, payload: true });
    setTimeout(() => {
       dispatch({ type: LOGIN_SUCCESS, paylaod: true });
       dispatch({ type: LOGIN_LOADING, payload: false });
       setSubmitting(false);
-      console.log('login success');
-      return true;
+      if (props.callback) props.callback();
    }, 1000);
 };

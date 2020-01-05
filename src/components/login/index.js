@@ -2,8 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import LocalModal from "../modal/LocalModal";
 import BasicModal from '../modal/BasicModal';
 import LoginForm from '../forms/LoginForm';
+import LoggedInMenu from "./LoggedInMenu";
 import { login } from '../../store/actions/userActions';
 import './index.scss';
 
@@ -13,22 +15,19 @@ const NotLogged = ({clickHandler}) => (
 
 const LoginMenu = ({ login, user}) => {
    const [isOpen, setIsOpen] = React.useState(false);
-   const toggleModal = () => setIsOpen(!isOpen);
-   const handleClose = () => {
-      setIsOpen(false);
-   };
-   const loginHandle = () => {
-       login().then(res => {
-           console.log(res);
-       });
-   };
+   const [localModalIsOpen, setLocalModalIsOpen] = React.useState(false);
+   const handleClose = () => setIsOpen(false);
+   const loginHandle = () => login();
    return (
       <div className="login">
           {user.isLogged
               ? (
-                  <div>
+                  <div className="login-menu-wrap" onClick={() => setLocalModalIsOpen(true)}>
                       <FontAwesomeIcon icon="user" />
-                      <div>User</div>
+                      <span>User</span>
+                      <LocalModal isOpen={localModalIsOpen} closeHandler={() => setLocalModalIsOpen(false)}>
+                          <LoggedInMenu />
+                      </LocalModal>
                   </div>
                 )
               : (
@@ -36,7 +35,7 @@ const LoginMenu = ({ login, user}) => {
               )
           }
          <BasicModal isOpen={isOpen} closeModal={handleClose}>
-            <LoginForm submitHandler={loginHandle} />
+            <LoginForm callback={handleClose} submitHandler={loginHandle} />
          </BasicModal>
       </div>
    );

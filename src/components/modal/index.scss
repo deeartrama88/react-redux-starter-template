@@ -1,0 +1,17 @@
+.localModal {
+  position: absolute;
+  left: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  bottom: -10px;
+  transform: translateY(100%);
+  border-radius: 5px;
+  &:hover {
+    color: white;
+  }
+
+  &.open {
+    display: block;
+  }
+}
