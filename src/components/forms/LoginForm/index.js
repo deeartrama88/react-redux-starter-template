@@ -19,14 +19,23 @@ const validationSchema = Yup.object({
 
 const LoginForm = ({isSubmitting}) => {
     return (
-        <Form>
-            <div className="login-title">LOGIN</div>
-            <CustomField name="password" type="text" placeholder="Password"/>
-            <CustomField name="username" type="text" placeholder="Username"/>
-            <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Loading' : 'Submit'}
-            </button>
-        </Form>
+       <Form>
+          <div className='login-box'>
+             <div className="login-title">LOGIN</div>
+          </div>
+          <CustomField name="password" type="text" placeholder="Password"/>
+          <CustomField name="username" type="text" placeholder="Username"/>
+          <span className='lost-pass'>Lost your Password?</span>
+          <div className='wrap'>
+             <button className='wrap-btn' type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Loading' : 'Sign in'}
+             </button>
+          </div>
+         <div className='holder'>
+            <div className='holder-line'> </div>
+            <div className='text'>Dont have an account? <span className='text-color'>Sign up here!</span></div>
+         </div>
+       </Form>
     );
 };
 

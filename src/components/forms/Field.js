@@ -1,5 +1,6 @@
 import React from "react";
 import { Field } from 'formik';
+import './Field.scss';
 
 const CustomField = ({type, label, placeholder, name}) => {
     return (
@@ -9,7 +10,7 @@ const CustomField = ({type, label, placeholder, name}) => {
                   form: {touched, errors}, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
                   meta,
               }) => (
-                <div>
+                <div className='input-box'>
                     <div>{label}</div>
                     <input className="my-custom-input" type={type} {...field} placeholder={placeholder}/>
                     {meta.touched && meta.error && (
