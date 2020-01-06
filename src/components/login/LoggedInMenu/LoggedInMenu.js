@@ -1,9 +1,9 @@
 import React from 'react';
+import "./index.scss";
 
 const LoggedInMenu = () => {
-
     return (
-        <div>
+        <div className="login-menu">
             <div>Notifications</div>
             <div>Messages</div>
             <div>Purchase history</div>

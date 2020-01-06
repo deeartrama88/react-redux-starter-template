@@ -8,7 +8,8 @@ const BasicModal = ({ isOpen, closeModal, children }) => {
          width: '50%',
          height: '50%',
          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-         margin: 'auto'
+         margin: 'auto',
+         border: 'none'
       }
    };
    return (

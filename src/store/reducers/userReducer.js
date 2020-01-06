@@ -1,7 +1,7 @@
 import { LOGIN_SUCCESS, LOGIN_FAIL } from '../actions/constants';
 
 const initState = {
-   isLogged: false
+   isLogged: true
 };
 
 const userReducer = (state = initState, action) => {

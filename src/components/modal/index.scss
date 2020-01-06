@@ -7,11 +7,13 @@
   bottom: -10px;
   transform: translateY(100%);
   border-radius: 5px;
-  &:hover {
-    color: white;
-  }
 
   &.open {
     display: block;
   }
+}
+.close {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
