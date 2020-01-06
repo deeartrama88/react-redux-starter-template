@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import { bindActionCreators } from "redux";
 import CustomField from '../Field';
 import {registration} from '../../../store/actions/userActions';
+import "../index.scss";
 import "./index.scss";
 
 const validationSchema = Yup.object({
@@ -21,7 +22,11 @@ const validationSchema = Yup.object({
 const RegistrationForm = ({isSubmitting, errors}) => {
     return (
         <Form>
-            <div className="login-title">Registration</div>
+           <div className='form-title-box'>
+              <div className='form-title-line'> </div>
+               <div className="form-title">Registration</div>
+              <div className='form-title-line'> </div>
+           </div>
             <CustomField name="firstName" type="text" placeholder="First Name"/>
             <CustomField name="lastName" type="text" placeholder="Last Name"/>
             <CustomField name="email" type="text" placeholder="Email"/>
@@ -31,9 +36,11 @@ const RegistrationForm = ({isSubmitting, errors}) => {
             {/* {errors && errors.serverError && ( */}
             {/*    <div>{errors.serverError}</div> */}
             {/* )} */}
-            <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Loading' : 'Submit'}
-            </button>
+           <div className='wrap'>
+              <button className='wrap-btn' type="submit" disabled={isSubmitting}>
+                 {isSubmitting ? 'Loading' : 'Sign in'}
+              </button>
+           </div>
         </Form>
     );
 };

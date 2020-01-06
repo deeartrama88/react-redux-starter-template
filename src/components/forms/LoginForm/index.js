@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import { bindActionCreators } from "redux";
 import CustomField from '../Field';
 import {login} from '../../../store/actions/userActions';
+import "../index.scss";
 import "./index.scss";
 
 const validationSchema = Yup.object({
@@ -20,8 +21,8 @@ const validationSchema = Yup.object({
 const LoginForm = ({isSubmitting}) => {
     return (
        <Form>
-          <div className='login-box'>
-             <div className="login-title">LOGIN</div>
+          <div className='form-title-box'>
+             <div className="form-title">LOGIN</div>
           </div>
           <CustomField name="password" type="text" placeholder="Password"/>
           <CustomField name="username" type="text" placeholder="Username"/>

@@ -1,12 +1,21 @@
- .input-box {
+ .input-box-wrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 300px;
   margin: auto;
 }
+ .input-box{
+   width: 100%;
+   &[type='checkbox'] {
+    width: auto;
+  }
+ }
 .my-custom-input {
   font-size: 24px;
   margin: 25px 0;
   border: 2px solid #c8c8c8;
+}
+.checkbox-label {
+  display: inline-block;
 }

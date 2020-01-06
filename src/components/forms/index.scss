@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  &-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #437fa1;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 10px;
+    &-line {
+      height: 2px;
+      background: gray;
+      flex-grow: 1;
+    }
+  }
+}
+
+.form-title-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  &-btn {
+    font-size: 24px;
+
+    padding: 2px 114px;
+    background-color: #88c27d;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrap {
+    &-btn {
+      font-size: 16px;
+      padding: 7px 126px;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .wrap {
+    &-btn {
+      font-size: 14px;
+      padding: 8px 128px;
+    }
+  }
+}

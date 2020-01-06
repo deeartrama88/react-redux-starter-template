@@ -14,20 +14,24 @@ const CustomField = ({type, label, placeholder, name, checkboxLabel}) => {
                 return (
                     <div>
                         <div>{label}</div>
-                        <input
-                            className="input-box"
-                            type={type}
-                            {...field}
-                            value={field.value}
-                            placeholder={placeholder}
-                            {...checkedAtt}
-                        />
-                        {type === 'checkbox' && checkboxLabel && (
-                            <span className="checkbox-label">{checkboxLabel}</span>
-                        )}
-                        {meta.touched && meta.error && (
-                            <div className="error">{meta.error}</div>
-                        )}
+                        <div className="input-box-wrap">
+                            <div>
+                                <input
+                                   className="input-box"
+                                   type={type}
+                                   {...field}
+                                   value={field.value}
+                                   placeholder={placeholder}
+                                   {...checkedAtt}
+                                />
+                                {type === 'checkbox' && checkboxLabel && (
+                                   <span className="checkbox-label">{checkboxLabel}</span>
+                                )}
+                            </div>
+                            {meta.touched && meta.error && (
+                               <div className="error">{meta.error}</div>
+                            )}
+                        </div>
                     </div>
                 )
             }}
