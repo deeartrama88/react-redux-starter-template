@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import LocalModal from "../modal/LocalModal";
 import BasicModal from '../modal/BasicModal';
 import LoginForm from '../forms/LoginForm';
+import RegistrationForm from '../forms/RegistrationForm';
 import LoggedInMenu from "./LoggedInMenu";
 import { login } from '../../store/actions/userActions';
 import './index.scss';
@@ -34,8 +35,8 @@ const LoginMenu = ({ login, user}) => {
                   <NotLogged clickHandler={() => setIsOpen(true)} />
               )
           }
-         <BasicModal isOpen={isOpen} closeModal={handleClose}>
-            <LoginForm callback={handleClose} submitHandler={loginHandle} />
+         <BasicModal isOpen={true} closeModal={handleClose}>
+            <RegistrationForm callback={handleClose} submitHandler={loginHandle} />
          </BasicModal>
       </div>
    );
