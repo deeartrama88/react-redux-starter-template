@@ -1,9 +1,15 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { combineReducers } from 'redux';
+import { addToCart } from '../../../store/actions/product';
 import './ProductDeteils.scss';
 import ProductMain from '../../../assets/images/ProductDetails/product-main-img.jpg';
 import ProductCart from '../../../assets/images/ProductDetails/product-cart-icon.png';
 
 const ProductDetails = () => {
+   const {id} = useParams();
+   console.log(id);
    return (
       <div className="product">
          <div className="product-main">
@@ -80,4 +86,8 @@ const ProductDetails = () => {
    );
 };
 
-export default ProductDetails;
+const mapPropsToState = dispatch => combineReducers({
+   addToCart
+}, dispatch);
+
+export default connect(null, mapPropsToState)(ProductDetails);

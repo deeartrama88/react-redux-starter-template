@@ -1,0 +1,43 @@
+.admin {
+  .react-tabs {
+    &__tab-list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 2rem;
+    }
+    &__tab {
+      flex-grow: 1;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      &--selected {
+        color: lightskyblue;
+        &.upload-new-product {
+          color: lightblue;
+        }
+      }
+      &:focus {
+        box-shadow: none;
+        outline: none;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.upload-new-product {
+  background: lightcoral;
+  padding: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  list-style: none;
+}

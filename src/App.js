@@ -9,6 +9,7 @@ const MainPage = lazy(() => import('./layouts/MainPage'));
 const CooksPage = lazy(() => import('./layouts/Cooks'));
 const ProductPage = lazy(() => import('./layouts/ProductPage'));
 const AdminPage = lazy(() => import('./layouts/AdminPage'));
+const CartPage = lazy(() => import('./layouts/CartPage'));
 
 const App = () => {
    return (
@@ -21,6 +22,7 @@ const App = () => {
                   <Route exact path="/contacts" component={CooksPage} />
                   <Route exact path="/product/:id" component={ProductPage} />
                   <Route exact path="/admin" component={AdminPage} />
+                  <Route exact path="/cart" component={CartPage} />
                </Suspense>
             </div>
             <Footer />

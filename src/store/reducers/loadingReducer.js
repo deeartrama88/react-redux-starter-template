@@ -1,12 +1,13 @@
-/* tslint:disable no-small-switch */
 import {
     REGISTRATION_LOADING,
     REGISTRATION_FAIL,
-    REGISTRATION_SUCCESSFUL
+    REGISTRATION_SUCCESSFUL,
+    CART_LOADING,
 } from '../actions/constants';
 
 const initState = {
     registrationLoading: false,
+    cartLoading: false,
 };
 
 const loadingReducer = (state = initState, action) => {
@@ -17,6 +18,8 @@ const loadingReducer = (state = initState, action) => {
             return { ...state, registrationLoading: false };
         case REGISTRATION_LOADING:
             return { ...state, registrationLoading: true};
+        case CART_LOADING:
+            return { ...state, cartLoading: action.payload};
         default:
             return state;
     }
