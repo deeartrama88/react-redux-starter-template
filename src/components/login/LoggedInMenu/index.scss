@@ -1,0 +1,19 @@
+.login-menu {
+  width: 160px;
+  hr {
+    color: #c8c8c8;
+    height: 2px;
+    background-color: #c8c8c8;
+  }
+}
+.login-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #5c7f98;
+    &-box {
+      border: 2px solid red;
+      border-radius: 50%;
+      padding: 2px 7px;
+    }
+}
