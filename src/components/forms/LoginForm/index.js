@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import {Form, withFormik} from 'formik';
 import {connect} from "react-redux";
 import { bindActionCreators } from "redux";
-import CustomField from '../Field';
+import CustomField from '../components/Field/Field';
 import {login} from '../../../store/actions/userActions';
 import "../index.scss";
 import "./index.scss";

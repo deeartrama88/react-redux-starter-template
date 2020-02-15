@@ -1,0 +1,22 @@
+@import "src/assets/scss/colors";
+.input-box-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+   margin-bottom: 0.25rem;
+   input, textarea {
+     padding: 0.35rem;
+     border: none;
+     box-sizing: border-box;
+     background: $inputBG
+   }
+}
+ .input-box{
+   width: 100%;
+ }
+.input-label {
+  font-size: 1.5rem;
+}
+.checkbox-label {
+  display: inline-block;
+}

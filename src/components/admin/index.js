@@ -1,17 +1,12 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Parent from "./components/Parent";
-import Child from "./components/Child";
+import UploadProductForm from "../forms/UploadProductForm";
 import 'react-tabs/style/react-tabs.css';
 import './index.scss';
 
 const Admin = () => {
     return (
         <div className="admin">
-            <Parent>
-                <Child />
-                <Child />
-            </Parent>
             <Tabs>
                 <TabList>
                     <Tab className="upload-new-product">Upload new product</Tab>
@@ -21,7 +16,7 @@ const Admin = () => {
                 </TabList>
 
                 <TabPanel>
-                    <h2>upload new product content</h2>
+                    <UploadProductForm />
                 </TabPanel>
                 <TabPanel>
                     <h2>All users tab content</h2>

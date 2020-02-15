@@ -1,4 +1,8 @@
+@import "../../assets/scss/colors.scss";
+@import "../../assets/scss/mixins.scss";
+
 .admin {
+  font-size: 16px;
   .react-tabs {
     &__tab-list {
       display: flex;
@@ -12,9 +16,15 @@
       text-align: center;
       margin-bottom: 1rem;
       background: none;
-      color: white;
+      color: $grayTextColor;
       border: none;
       cursor: pointer;
+      @include media(medium) {
+        font-size: 1.5rem;
+      }
+      @include media(medium-sm) {
+        font-size: 1rem;
+      }
       &--selected {
         color: lightskyblue;
         &.upload-new-product {
@@ -40,4 +50,11 @@
   margin-bottom: 1rem;
   cursor: pointer;
   list-style: none;
+  @include media(medium) {
+    font-size: 1.5rem;
+  }
+  @include media(medium-sm) {
+    width: 100%;
+    text-align: center;
+  }
 }

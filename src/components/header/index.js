@@ -9,30 +9,32 @@ import FavoriteIcon from '../../assets/images/header/header-favrite-icon.png';
 import MassageIcon from '../../assets/images/header/header-message-icon.png';
 
 const Index = () => {
-   return (
-      <header className="header">
-         <div className="logo">
-            <img src={LogoIcon} alt="" />
-         </div>
-         <div className="header-input">
-            <input className="search" type="text" />
-         </div>
-         <div className="header-assets">
-            <img src={AssetsIcon} alt="" />
-         </div>
-         <div className="header-box">
-            <img src={MassageIcon} alt="" />
-            <img src={FavoriteIcon} alt="" />
-            <img src={BasketIcon} alt="" />
-         </div>
-         <div className="header-user">
-            <LoginMenu />
-         </div>
-         <div className="header-menu">
-            <img src={BurgerIcon} alt="" />
-         </div>
-      </header>
-   );
+    return (
+        <header className="header">
+            <div className="logo">
+                <img src={LogoIcon} alt=""/>
+            </div>
+            <div className="header-input">
+                <input className="search" type="text"/>
+            </div>
+            <div className="header-desktop-menu">
+                <div className="header-assets">
+                    <img src={AssetsIcon} alt=""/>
+                </div>
+                <div className="header-box">
+                    <img src={MassageIcon} alt=""/>
+                    <img src={FavoriteIcon} alt=""/>
+                    <img src={BasketIcon} alt=""/>
+                </div>
+            </div>
+            <div className="header-user">
+                <LoginMenu/>
+            </div>
+            <div className="header-menu">
+                <img src={BurgerIcon} alt=""/>
+            </div>
+        </header>
+    );
 };
 
 export default Index;

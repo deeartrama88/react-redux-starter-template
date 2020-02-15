@@ -34,7 +34,8 @@
     "no-unneeded-ternary": "off",
     "jsx-a11y/img-redundant-alt": "off",
     "react/jsx-props-no-spreading": "off",
-    "jsx-a11y/alt-text": "off"
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   },
   "globals": {
     "window": true,

@@ -1,4 +1,5 @@
 @import './mixins';
+@import './colors';
 body {
    margin: 0;
    font-family: -apple-system, 'Raleway', cursive, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -6,8 +7,7 @@ body {
       'Helvetica Neue', 'Neucha', sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   background: #282c34;
-   color: blanchedalmond;
+   color: $grayTextColor;
 }
 .modalDefaultOverlay {
    width: 100%;

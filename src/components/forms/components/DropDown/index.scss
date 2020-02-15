@@ -1,0 +1,59 @@
+@import 'src/assets/scss/colors.scss';
+
+.select-dropdown {
+  position: relative;
+  display: inline-block;
+  &__label {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+  &-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    border: 3px solid $lightGray;
+    z-index: 1;
+    background: $white;
+    width: 100%;
+    box-sizing: border-box;
+    &.open {
+      display: block;
+    }
+  }
+  &-selected-wrap {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &-selected {
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border: 3px solid $lightGray;
+    text-align: center;
+    display: inline-block;
+    &--arrow {
+      border: solid $lightGray;
+      border-width: 3px 3px 3px 0;
+      width: 35px;
+      display: flex;
+      flex-flow: row wrap;
+      cursor: pointer;
+      & .arrow {
+        margin: auto;
+        display: block;
+        border: solid $lightGray;
+        border-width: 10px 10px 10px 10px;
+        border-color: $lightGray transparent transparent transparent;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+  &__item {
+    cursor: pointer;
+    padding: 0.5rem;
+    &:hover {
+      background: $lightGray;
+    }
+  }
+}
