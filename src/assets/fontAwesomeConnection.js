@@ -1,4 +1,4 @@
-// font awesome import
+
 /*
  * import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  * <FontAwesomeIcon icon="home" />
@@ -8,13 +8,20 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
+   faHeart,
+   faCommentAlt,
+} from '@fortawesome/free-regular-svg-icons';
+import {
    faSeedling,
    faUserFriends,
    faUtensils,
    faTrashAlt,
    faCartPlus,
    faUser,
-   faTimes
+   faTimes,
+   faShoppingCart,
+   faDatabase,
+   faBars,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -25,5 +32,10 @@ library.add(
    faCartPlus,
    faSeedling,
    faUser,
-   faTimes
+   faTimes,
+   faShoppingCart,
+   faHeart,
+   faCommentAlt,
+   faDatabase,
+   faBars,
 );

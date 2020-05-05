@@ -25,7 +25,7 @@ const LoginMenu = ({ login, user}) => {
               ? (
                   <div className="login-menu-wrap" onClick={() => setLocalModalIsOpen(true)}>
                       <FontAwesomeIcon icon="user" />
-                      <span>User</span>
+                      <span className="login-user-name">User</span>
                       <LocalModal isOpen={localModalIsOpen} closeHandler={() => setLocalModalIsOpen(false)}>
                           <LoggedInMenu />
                       </LocalModal>

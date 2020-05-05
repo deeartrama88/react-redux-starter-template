@@ -1,50 +1,65 @@
 @import '../../assets/scss/mixins.scss';
+@import "src/assets/scss/colors";
 
 .header {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   margin-top: 25px;
+   box-shadow: 0 0 4px $lightGray;
+   padding: 10px 0;
+   .container {
+      display: flex;
+      align-items: center;
+      flex-flow: row wrap;
+   }
    img {
       height: 62px;
    }
-   & > div {
+   &-input {
       flex-grow: 1;
-   }
-   &-input input {
-      width: 250px;
-      font-size: 20px;
-      cursor: pointer;
-      padding: 5px 5px 5px 40px;
-      height: 20px;
-      background: url('../../assets/images/header/footer-search-icon.png')
-         no-repeat 7px 1px;
-      background-size: auto 90%;
+      text-align: center;
+      input {
+         width: 250px;
+         font-size: 20px;
+         cursor: pointer;
+         padding: 5px 5px 5px 40px;
+         height: 20px;
+         background: url('../../assets/images/header/footer-search-icon.png') no-repeat 7px 1px;
+         background-size: auto 90%;
 
-      @include media(medium-sm) {
-         display: none;
+         @include media(medium-sm) {
+            display: none;
+         }
       }
    }
-   &-assets img {
-      height: 32px;
-      cursor: pointer;
+   svg {
+      font-size: 30px;
+      color: $mainBlue;
+      transition: color 0.3s;
+      &:hover {
+         cursor: pointer;
+         color: darken($mainBlue, 10);
+      }
    }
-   &-box img {
-      height: 32px;
-      padding: 0 15px;
+   &-assets{
       cursor: pointer;
+      &-title {
+         font-size: 22px;
+         margin-left: 10px;
+      }
    }
-   &-user img {
-      cursor: pointer;
-      height: 42px;
+   &-cart-menu {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
    }
-   &-menu img {
-      height: 26px;
-      cursor: pointer;
+   &-user {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
    }
    &-desktop-menu {
       display: flex;
       flex-flow: row wrap;
+      justify-content: space-evenly;
+      flex-grow: 1;
       @media screen and (max-width: 1024px) {
          display: none;
       }
