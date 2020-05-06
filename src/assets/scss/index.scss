@@ -8,6 +8,7 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    color: $grayTextColor;
+   background: #F6F5F8;
 }
 .modalDefaultOverlay {
    width: 100%;
@@ -32,13 +33,13 @@ code {
 }
 .main-content {
    flex-grow: 1;
-   max-width: 1200px;
+   max-width: 1585px;
    margin: auto;
 }
 .container {
    width: 100%;
    box-sizing: border-box;
-   max-width: 1200px;
+   max-width: 1585px;
    margin: 0 auto;
    padding: 0 10px;
 }

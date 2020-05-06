@@ -1,6 +1,7 @@
 $small: 375px;
 $medium: 1024px;
-$medium-small: 560px;
+$medium-small: 768px;
+$big: 1440px;
 
 @mixin flex($justify, $flow) {
    display: flex;
@@ -16,5 +17,11 @@ $medium-small: 560px;
    }
    @if $media == medium-sm {
       @media only screen and (max-width: $medium-small) { @content; }
+   }
+   @if $media == big {
+      @media only screen and (max-width: $big) { @content; }
+   }
+   @if $media == lg {
+      @media only screen and (min-width: $big) { @content; }
    }
 }

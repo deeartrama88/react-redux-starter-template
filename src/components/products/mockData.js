@@ -40,6 +40,24 @@ const mock = [
       imgSrc:
          'https://4.imimg.com/data4/KD/EI/MY-15519070/3d-character-modelling-services-500x500.jpg',
       category: ['3d Asset', 'Animated']
+   },
+   {
+      id: 5,
+      title: 'Stylized asset',
+      desc: 'Universal model diferent projects.',
+      price: 145,
+      imgSrc:
+         'https://4.imimg.com/data4/KD/EI/MY-15519070/3d-character-modelling-services-500x500.jpg',
+      category: ['3d Asset', 'Animated']
+   },
+   {
+      id: 6,
+      title: 'Stylized asset',
+      desc: 'Universal model diferent projects.',
+      price: 145,
+      imgSrc:
+         'https://4.imimg.com/data4/KD/EI/MY-15519070/3d-character-modelling-services-500x500.jpg',
+      category: ['3d Asset', 'Animated']
    }
 ];
 

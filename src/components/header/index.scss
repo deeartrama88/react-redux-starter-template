@@ -49,11 +49,17 @@
       flex-grow: 1;
       display: flex;
       justify-content: space-between;
+      @include media(medium-sm) {
+         display: none;
+      }
    }
    &-user {
       flex-grow: 1;
       display: flex;
       justify-content: center;
+      @include media(medium-sm) {
+         display: none;
+      }
    }
    &-desktop-menu {
       display: flex;

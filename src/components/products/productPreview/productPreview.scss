@@ -1,41 +1,64 @@
+@import 'src/assets/scss/mixins';
+@import "src/assets/scss/colors";
 .product-preview {
-   margin-bottom: 20px;
-   background: #313742;
-   width: 30%;
+   background: #f1f1f1;
+   width: 280px;
+   height: 350px;
    border-radius: 5px;
    padding: 5px;
-
+   box-shadow: 0 0 5px $lightGray;
+   display: flex;
+   flex-flow: column wrap;
+   margin: auto;
+   transition: all 0.3s;
+   &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+   }
+   @include media(medium) {
+      width: 300px;
+   }
    &-image {
-      img {
-         width: 100%;
-         height: 300px;
+      width: 100%;
+      height: 230px;
+      background-size: cover;
+      background-position: center;
+   }
+   &-price {
+      padding: 0 10px 10px;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-grow: 1;
+      @include media(medium) {
+
+      }
+      .category {
+         display: flex;
+         align-items: center;
+         color: $mainOrange;
+         & > div {
+            padding-right: 10px;
+         }
+      }
+      .price {
+         color: $grayTextColor;
+         font-size: 24px;
+         font-family: Arial sans-serif;
       }
    }
    &-title {
-      font-size: 28px;
+      font-size: 22px;
       display: flex;
       justify-content: space-between;
-      padding: 25px 0;
+      align-items: center;
+      padding: 15px 0 0;
+      margin: 0 10px;
       color: #81adcd;
-      & div {
-         background-color: #92d36e;
-         padding: 0 10px;
-         border-radius: 18px;
-         color: #fff;
-      }
-   }
-   &-desc {
-      font-size: 20px;
-      color: #605f5f;
-   }
-   &-category {
-      display: flex;
-      justify-content: flex-start;
-      color: #ec8d40;
-      padding: 15px 0;
-      font-size: 20px;
-      & div {
-         padding-right: 15px;
+      border-bottom: 1px solid $lightGray;
+      @include media(medium) {
+         font-size: 20px;
       }
    }
 }
