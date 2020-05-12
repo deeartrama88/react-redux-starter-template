@@ -1,15 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { combineReducers } from 'redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { addToCart } from '../../../store/actions/product';
 import './ProductDeteils.scss';
 import ProductMain from '../../../assets/images/ProductDetails/product-main-img.jpg';
-import ProductCart from '../../../assets/images/ProductDetails/product-cart-icon.png';
 
 const ProductDetails = () => {
-   const {id} = useParams();
-   console.log(id);
    return (
       <div className="product">
          <div className="product-main">
@@ -32,52 +29,62 @@ const ProductDetails = () => {
          </div>
          <div className="product-box">
             <div className="wrap">
-               <span className="product-box_price">12.00$</span>
+               <span className="product-box_price">$12.00</span>
                <span className="product-box_text">Royalty Free License</span>
-               <button className="producr-btn">
-                  <img className="producr-btn_icon" src={ProductCart} alt="" />
-                  <span className="producr-btn_text">Add to cart</span>
+               <button className="product-btn">
+                  <FontAwesomeIcon icon="shopping-cart" />
+                  <span className="product-btn_text">Add to cart</span>
                </button>
             </div>
-            <div className="sidebar">
-               <h3 className="sidebar-title">3d model details</h3>
-               <div className="sidebar-headline">Formats:</div>
-               <ul className="box">
-                  <li className="box-col">OBJ</li>
-                  <li className="box-col">FBX</li>
-                  <li className="box-col">3ds Max(.max) ver. 2020</li>
+            <div className="wrap">
+               <h3 className="wrap-title">3d model formats:</h3>
+               <ul className="formats">
+                  <li>Unity 3D (.unitypackage, .prefab)</li>
+                  <li>3D Studio (.3ds)</li>
+                  <li>Autodesk (.fbx)</li>
+                  <li>OBJ (.obj, .mtl)</li>
+                  <li>Stereoligthography (.stl)</li>
                </ul>
-               <ul className="input">
-                  <li className="input-col">
-                     Animated
-                     <div className="input-col_style red">
-                        <div className="input-col_border red"> </div>
-                     </div>
+               <button className="formats-btn">Request format conversion</button>
+            </div>
+            <div className="wrap">
+               <h3 className="wrap-title">3d model detail</h3>
+               <ul className="details">
+                  <li>
+                     <div className="property">Publish Date</div>
+                     <div className="value">2019-09-05</div>
                   </li>
-                  <li className="input-col">
-                     Rigged
-                     <div className="input-col_style green">
-                        <div className="input-col_border green"> </div>
-                     </div>
+                  <li>
+                     <div className="property">Model ID</div>
+                     <div className="value">#2105953</div>
                   </li>
-               </ul>
-               <ul className="object">
-                  <li className="object-details">
-                     Polygons <span>1302</span>
+                  <li>
+                     <div className="property">Animated</div>
+                     <div className="value-approved">approved <FontAwesomeIcon icon={['far', 'check-circle']} /></div>
                   </li>
-                  <li className="object-details">
-                     Vertices <span>1330</span>
+                  <li>
+                     <div className="property">Rigged</div>
+                     <div className="value-approved">approved <FontAwesomeIcon icon={['far', 'check-circle']} /></div>
                   </li>
-               </ul>
-               <ul className="meta">
-                  <li className="meta-box">
-                     Textures: <span>Diffuse only</span>
+                  <li>
+                     <div className="property">AR / VR / low-poly</div>
+                     <div className="value-approved">approved <FontAwesomeIcon icon={['far', 'check-circle']} /></div>
                   </li>
-                  <li className="meta-box">
-                     UV Mapping: <span>non-overlapping</span>
+                  <li>
+                     <div className="property">PBR</div>
+                     <div className="value-approved">approved <FontAwesomeIcon icon={['far', 'check-circle']} /></div>
                   </li>
-                  <li className="meta-box">
-                     Publish date: <span>2019-11-03</span>
+                  <li>
+                     <div className="property">Geometry</div>
+                     <div className="value">Polygon mesh</div>
+                  </li>
+                  <li>
+                     <div className="property">Polygons</div>
+                     <div className="value">36 000</div>
+                  </li>
+                  <li>
+                     <div className="property">Vertices</div>
+                     <div className="value">31 000</div>
                   </li>
                </ul>
             </div>

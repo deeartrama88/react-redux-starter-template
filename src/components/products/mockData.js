@@ -1,6 +1,12 @@
 import product1 from '../../assets/images/products/body-product-img.jpg'
 import product2 from '../../assets/images/products/body-product-img2.jpg'
 import product3 from '../../assets/images/products/body-product-img3.jpg'
+import item1 from '../../assets/images/products/CardImage1.png';
+import item2 from '../../assets/images/products/CardImage2.png';
+import item3 from '../../assets/images/products/CardImage3.png';
+import item4 from '../../assets/images/products/CardImage4.png';
+import item5 from '../../assets/images/products/CardImage5.png';
+import item6 from '../../assets/images/products/CardImage6.png';
 const mock = [
    {
       id: 1,
@@ -37,8 +43,7 @@ const mock = [
       title: 'Stylized asset',
       desc: 'Universal model diferent projects.',
       price: 145,
-      imgSrc:
-         'https://4.imimg.com/data4/KD/EI/MY-15519070/3d-character-modelling-services-500x500.jpg',
+      imgSrc: item1,
       category: ['3d Asset', 'Animated']
    },
    {
@@ -46,19 +51,41 @@ const mock = [
       title: 'Stylized asset',
       desc: 'Universal model diferent projects.',
       price: 145,
-      imgSrc:
-         'https://4.imimg.com/data4/KD/EI/MY-15519070/3d-character-modelling-services-500x500.jpg',
-      category: ['3d Asset', 'Animated']
+      imgSrc: item2,
+      category: ['3d Asset']
    },
    {
       id: 6,
       title: 'Stylized asset',
       desc: 'Universal model diferent projects.',
-      price: 145,
-      imgSrc:
-         'https://4.imimg.com/data4/KD/EI/MY-15519070/3d-character-modelling-services-500x500.jpg',
+      price: 14,
+      imgSrc:item3,
       category: ['3d Asset', 'Animated']
-   }
+   },
+   {
+      id: 7,
+      title: 'Stylized asset',
+      desc: 'Universal model diferent projects.',
+      price: 15,
+      imgSrc: item4,
+      category: ['3d Asset']
+   },
+   {
+      id: 8,
+      title: 'Stylized asset',
+      desc: 'Universal model diferent projects.',
+      price: 45,
+      imgSrc: item5,
+      category: ['3d Asset', 'Animated']
+   },
+   {
+      id: 9,
+      title: 'Stylized asset',
+      desc: 'Universal model diferent projects.',
+      price: 5,
+      imgSrc: item6,
+      category: ['3d Asset']
+   },
 ];
 
 export default mock;

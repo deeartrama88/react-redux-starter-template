@@ -10,6 +10,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
    faHeart,
    faCommentAlt,
+   faCheckCircle,
 } from '@fortawesome/free-regular-svg-icons';
 import {
    faSeedling,
@@ -22,6 +23,7 @@ import {
    faShoppingCart,
    faDatabase,
    faBars,
+   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -38,4 +40,6 @@ library.add(
    faCommentAlt,
    faDatabase,
    faBars,
+   faEnvelope,
+   faCheckCircle,
 );

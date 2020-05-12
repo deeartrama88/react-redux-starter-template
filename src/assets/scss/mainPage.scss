@@ -1,9 +1,0 @@
-@import '../../assets/scss/mixins';
-.main-page-title {
-  font-size: 33px;
-  margin: 30px 0 50px;
-  text-align: center;
-  @include media(medium-sm) {
-    font-size: 19px;
-  }
-}
